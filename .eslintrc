@@ -1,12 +1,13 @@
 {
   "root": true,
   "parserOptions": {
-    "ecmaVersion": 2018,
+    "ecmaVersion": 2017,
     "sourceType": "module"
   },
   "env": {
     "node": true,
-    "es6": true
+    "es6": true,
+    "commonjs": true
   },
   "globals": {
     "__non_webpack_require__": false
