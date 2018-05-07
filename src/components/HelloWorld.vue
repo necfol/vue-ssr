@@ -4,12 +4,13 @@
     <h2>Essential Links</h2>
     <ul>
       <li>
-        <a
-          href="https://vuejs.org"
+        <!-- <a
+          v-link="'/Test'"
           target="_blank"
         >
           Core Docs
-        </a>
+        </a> -->
+        <router-link to="/Test">Core Docs</router-link>
       </li>
       <li>
         <a
