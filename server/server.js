@@ -1,7 +1,8 @@
 const Vue = require('vue')
 const express = require('express')
 const server = express()
-import createApp from '../dist/vue-ssr-server-bundle.js'
+const createApp = require('../dist/vue-ssr-server-bundle.js').default
+// import createApp from '../dist/vue-ssr-server-bundle.js'
 const renderer = require('vue-server-renderer').createRenderer({
     template: require('fs').readFileSync('./src/index.template.html', 'utf-8'),
 })

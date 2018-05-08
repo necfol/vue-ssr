@@ -3,9 +3,17 @@
     ["env", {
       "targets": {
         "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
-      }
+      },
+      "modules": false
     }],
-    "vue"
+    "vue",
+    "stage-2"
   ],
-  "plugins": ["transform-vue-jsx", "transform-runtime"],
+  "plugins": ["transform-vue-jsx", "syntax-dynamic-import", ["transform-runtime", {
+    "helpers": false,
+    "polyfill": false,
+    "regenerator": true,
+    "moduleName": "babel-runtime"
+  }]],
+  "comments": false
 }

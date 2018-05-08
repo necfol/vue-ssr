@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" data-server-rendered="true">
     <img src="./assets/logo.png">
     <router-view/>
   </div>

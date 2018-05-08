@@ -14,12 +14,10 @@ module.exports = {
         app: './src/entry-client.js',
     },
     output: {
-        path: config.build.assetsRoot,
+        path: path.resolve(__dirname, '../dist'),
         filename: '[name].js',
-        publicPath:
-            process.env.NODE_ENV === 'production'
-                ? config.build.assetsPublicPath
-                : config.dev.assetsPublicPath,
+        chunkFilename: '[name].bundle.js',
+        publicPath: '/dist/',
     },
     resolve: {
         extensions: ['.js', '.vue', '.json'],
@@ -37,11 +35,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 use: [{ loader: 'babel-loader' }],
-                include: [
-                    resolve('src'),
-                    resolve('test'),
-                    resolve('node_modules/webpack-dev-server/client'),
-                ],
+                exclude: /node_modules/,
             },
             {
                 test: /\.css$/,
