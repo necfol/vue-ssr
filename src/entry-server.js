@@ -8,7 +8,6 @@ export default context => {
             if (!isMatch.length) {
                 reject({ code: 404 })
             } else {
-                console.log('这是拿来了', isMatch)
                 resolve(app)
             }
         })
