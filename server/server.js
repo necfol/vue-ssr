@@ -1,9 +1,11 @@
 const Vue = require('vue')
-const server = require('express')()
+const express = require('express')
+const server = express()
 import createApp from '../dist/vue-ssr-server-bundle.js'
 const renderer = require('vue-server-renderer').createRenderer({
     template: require('fs').readFileSync('./src/index.template.html', 'utf-8'),
 })
+server.use('/dist', express.static('./dist'))
 server.get('*', (req, res) => {
     const context = { url: req.url }
     createApp(context)

@@ -7,6 +7,8 @@
     "scripts": {
         "server-build":
             "webpack --mode development --config build/webpack.server.conf.js",
+        "client-build":
+            "webpack --mode development --config build/webpack.client.conf.js",
         "server": "babel-node server/server.js",
         "precommit": "lint-staged",
         "dev":
