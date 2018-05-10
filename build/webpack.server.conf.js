@@ -18,6 +18,7 @@ module.exports = merge(baseConfig, {
     // 此处告知 server bundle 使用 Node 风格导出模块(Node-style exports)
     output: {
         filename: 'vue-ssr-server-bundle.js',
+        chunkFilename: '[name].bundle.server.js',
         libraryTarget: 'commonjs2',
     },
 

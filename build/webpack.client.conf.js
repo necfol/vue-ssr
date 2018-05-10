@@ -7,6 +7,7 @@ module.exports = merge(baseConfig, {
     entry: './src/entry-client.js',
     output: {
         filename: 'vue-ssr-client-bundle.js',
+        chunkFilename: '[name].bundle.js',
     },
     plugins: [
         // 此插件在输出目录中
