@@ -1,6 +1,5 @@
 <template>
-  <div id="app" data-server-rendered="true">
-    <img src="./assets/logo.png">
+  <div id="app">
     <router-view/>
   </div>
 </template>

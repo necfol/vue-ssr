@@ -11,7 +11,7 @@ server.get('*', (req, res) => {
     const context = { url: req.url }
     createApp(context)
         .then(app => {
-            renderer.renderToString(app, { title: 'fuck' }, (err, html) => {
+            renderer.renderToString(app, context, (err, html) => {
                 if (err) {
                     if (err.code === 404) {
                         res.status(404).end('Page not found')
